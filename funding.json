@@ -2,10 +2,10 @@
   "version": "v1.0.0",
   "entity": {
     "type": "individual",
-    "role": "maintainer",
+    "role": "Founder & Maintainer",
     "name": "Tarun Pahade",
     "email": "tarunpahade55@gmail.com",
-    "description": "Full-stack developer building Scrapper Engine, an AI-powered web scraping and automation platform.",
+    "description": "Founder and maintainer of Scrapper Engine, an open-source AI infrastructure platform for browser automation, web data extraction, document intelligence, and workflow orchestration.",
     "webpageUrl": {
       "url": "https://github.com/tarunWebBuilder"
     }
@@ -14,49 +14,67 @@
     {
       "guid": "scrapper-engine",
       "name": "Scrapper Engine",
-      "description": "An AI-powered web scraping and automation engine supporting browser automation, PDF extraction, OCR, database integrations, and workflow generation via a FastAPI backend.",
+      "description": "Scrapper Engine is an open-source AI platform for browser automation and structured data extraction. It combines Playwright-powered automation, OCR, PDF processing, AI workflow generation, API integrations, and database connectors into a production-ready developer platform.",
       "webpageUrl": {
         "url": "https://github.com/tarunWebBuilder/scraper"
       },
       "repositoryUrl": {
         "url": "https://github.com/tarunWebBuilder/scraper"
       },
-      "licenses": ["MIT"],
-      "tags": ["scraper", "automation", "ai", "playwright", "fastapi", "web-scraping", "ocr", "open-source"]
+      "licenses": [
+        "MIT"
+      ],
+      "tags": [
+        "ai",
+        "automation",
+        "browser-automation",
+        "playwright",
+        "fastapi",
+        "web-scraping",
+        "ocr",
+        "llm",
+        "pdf",
+        "developer-tools",
+        "workflow-engine",
+        "open-source"
+      ]
     }
   ],
   "funding": {
     "channels": [
       {
-        "guid": "zerodha-rainmatter",
-        "type": "other",
-        "address": "https://rainmatter.com",
-        "description": "Zerodha Rainmatter — a fintech and open-source fund backing technology innovation in India"
-      },
-      {
-        "guid": "cheque-payment",
-        "type": "cheque",
-        "address": "Tarun Pahade, payable at par",
-        "description": "Send a cheque in favour of 'Tarun Pahade' to support development of Scrapper Engine"
+        "guid": "zerodha-floss",
+        "type": "grant",
+        "address": "https://rainmatter.org",
+        "description": "Grant support for building open-source developer infrastructure and AI tooling."
       }
     ],
     "plans": [
       {
-        "guid": "core-development",
+        "guid": "starter-grant",
         "status": "active",
-        "name": "Core Development",
-        "description": "Backend engine development, browser automation, AI workflow generation, OCR pipeline, and multi-database integration.",
-        "amount": 10000,
-        "currency": "INR",
-        "frequency": "monthly"
+        "name": "Seed Development Grant",
+        "description": "Accelerate core platform development, infrastructure, documentation, testing, and community support.",
+        "amount": 100000,
+        "currency": "USD",
+        "frequency": "one-time"
       },
       {
-        "guid": "one-time-support",
+        "guid": "growth-grant",
         "status": "active",
-        "name": "One-Time Support",
-        "description": "One-time contribution to support infrastructure, hosting, and feature development.",
-        "amount": 50000,
-        "currency": "INR",
+        "name": "Growth & Ecosystem Expansion",
+        "description": "Scale cloud infrastructure, expand integrations, improve AI capabilities, and grow the open-source contributor ecosystem.",
+        "amount": 500000,
+        "currency": "USD",
+        "frequency": "one-time"
+      },
+      {
+        "guid": "strategic-funding",
+        "status": "active",
+        "name": "Strategic Infrastructure Funding",
+        "description": "Support long-term research and development, enterprise integrations, developer tooling, security, and global adoption of the open-source platform.",
+        "amount": 1000000,
+        "currency": "USD",
         "frequency": "one-time"
       }
     ]
