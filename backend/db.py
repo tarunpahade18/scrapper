@@ -1,6 +1,12 @@
+import os
+
 from pymongo import MongoClient
 
-MONGO_URL = "mongodb://localhost:27017"
+MONGO_URL = (
+    os.getenv("MONGODB_URI")
+    or os.getenv("MONGO_URL")
+    or "mongodb://localhost:27017"
+)
 client = MongoClient(MONGO_URL)
 
 db = client["workflow_engine"]
