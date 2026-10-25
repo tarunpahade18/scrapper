@@ -3,21 +3,16 @@ uvicorn
 playwright
 pandas
 numpy
-scipy
 requests
 openpyxl
 sqlalchemy
 psycopg2-binary  # For PostgreSQL
 pymysql  # For MySQL
-scikit-learn  # For KNN, outliers
-json-logic  # For predicates in control
 RestrictedPython  # For sandboxed expression eval
 jsonschema  # For validating inputs against parameterSchema
 pydantic
-scrapy
 beautifulsoup4
 lxml
-twisted
 httpx
 pdfplumber
 pytesseract
