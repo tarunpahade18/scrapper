@@ -15,7 +15,8 @@ import {
   Rows3,
 } from "lucide-react";
 
-const heroVideoUrl = "https://www.youtube.com/embed/B_Rc9XtNhrQ";
+const heroVideoUrl =
+  "https://www.youtube-nocookie.com/embed/B_Rc9XtNhrQ?rel=0&modestbranding=1";
 
 const tabs = [
   "Browser tool for agents",
