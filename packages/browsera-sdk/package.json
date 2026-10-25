@@ -1,0 +1,48 @@
+{
+  "name": "browsera-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for the Scrapper workflow engine — run web scraping, data cleaning, datasources, and workflow nodes from Node.js or the browser.",
+  "license": "MIT",
+  "author": "Tarun Pahade",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "clean": "node scripts/clean.js",
+    "build": "npm run clean && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && tsc -p tsconfig.types.json && node scripts/postbuild.js",
+    "check:types": "tsc --noEmit --strict --target ES2022 --module ESNext --moduleResolution bundler --skipLibCheck scripts/consumer-check.ts",
+    "test": "node scripts/smoke.js && npm run check:types",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "scraper",
+    "scraping",
+    "web-scraping",
+    "workflow",
+    "automation",
+    "playwright",
+    "data-cleaning",
+    "sdk"
+  ],
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

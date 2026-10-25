@@ -23,3 +23,24 @@ Audio captchas (including ReCAPTCHA audio): Download audio and run a speech-to-t
 ReCAPTCHA v2/v3, hCaptcha, Turnstile, FunCaptcha: There is no reliable free solver. Open-source “bypass” scripts exist (e.g., using audio endpoints), but they’re unstable, often against ToS, and break frequently.
 Custom math/text captchas rendered as images: same as image/math above with OCR; sometimes regex post-processing improves accuracy.
 
+---
+
+## SDK
+
+The backend is also available as an npm package: [`packages/browsera-sdk`](packages/browsera-sdk).
+
+```bash
+npm install browsera-sdk
+```
+
+```ts
+import { BrowseraClient, isSuccess } from "browsera-sdk";
+
+const client = new BrowseraClient("http://localhost:8000");
+
+const loaded = await client.runNode<{ dataframeRef: string }>("loadCSV", { fileRef: "./data.csv" });
+if (isSuccess(loaded)) console.log(loaded.result.dataframeRef);
+```
+
+Thin typed client over `/run-node`, `/run-multiple-nodes`, `/workflow`, auth, and PDF endpoints — ESM + CJS, zero runtime dependencies. See [`packages/browsera-sdk/README.md`](packages/browsera-sdk/README.md) for the full API.
+
