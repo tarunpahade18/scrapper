@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { SearchBar } from "@/components/search-bar";
 import { Play, ScanSearch, CalendarRange } from "lucide-react";
 
 type Workflow = {
@@ -55,6 +56,10 @@ export default function Dasboard() {
           </Button>
         </div>
       </header>
+
+      <section className="mx-auto max-w-6xl px-6 pt-8">
+        <SearchBar />
+      </section>
 
       <section className="mx-auto max-w-6xl px-6 py-8">
         {loading ? (

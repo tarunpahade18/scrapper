@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { ClerkProvider } from "@clerk/nextjs"
+import { Analytics } from "@vercel/analytics/next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "@/styles/globals.css"
 
@@ -38,6 +39,7 @@ export default async function RootLayout({
         <ClerkProvider>
           {children}
         </ClerkProvider>
+        <Analytics />
       </body>
     </html>
   )
